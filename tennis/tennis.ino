@@ -8,7 +8,6 @@ uint16_t p1Score = 0;
 int p2Pin = 10;
 uint16_t p2Score = 0;
 int resetPin = 11;
-int count = 0;
 int baseTimer = 180;
 int timerFactor = 60;
 int delta = 0;
@@ -22,7 +21,7 @@ void setup(){
   Wire.setClock(100000);
   seg.displayOn();
   seg.setDigits(4);
-  for (count=0;count<=6;count++) {
+  for (int count=0;count<=6;count++) {
     pinMode(pinArray[count], OUTPUT);
   }
   pinMode(p1Pin, INPUT);
